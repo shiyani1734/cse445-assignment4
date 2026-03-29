@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://shiyani1734.github.io/cse445-assignment4"
+           targetNamespace="https://shiyani1734.github.io/cse445-assignment4"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
 
   <xs:element name="NationalParks" type="NationalParksType"/>
 
@@ -15,7 +19,7 @@
       <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
       <xs:element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
-    <xs:attribute name="Rating" type="xs:string" use="optional"/>
+    <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
   </xs:complexType>
 
   <xs:complexType name="AddressType">
@@ -24,7 +28,7 @@
       <xs:element name="Street" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="City" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="State" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="Zip" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Zip" type="xs:int" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
     <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
   </xs:complexType>
